@@ -5,12 +5,27 @@
     font-family: "Montserrat" ;
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    border:none;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --bg-color:#081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+}
+
+html{
+    font-size:62,5%;
+    overflow: hidden;
 }
 
 
 body{
-    background-color: #081b29;
-    color: #ededed;
+    background: var(--bg-color);
+    color: var(--text-color);
 }
 .header{
     position: fixed;
@@ -38,6 +53,7 @@ body{
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
+    transition: .3s;
 }
 
 .menu a:hover,
@@ -45,17 +61,9 @@ body{
     color: #00abf0;
 }
 
-#fondo{
-    background-color: #ededed;
-    color: black;
-    border-radius: 20px;
-}
-
-#fondo2{
-    background-color: black;
-    color: #ededed;
-    border-radius: 20px;
-
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
 }
 
 .home{
@@ -63,6 +71,7 @@ body{
     display: flex;
     align-items: center;
     padding: 0 10%;
+    
 }
 
 .home-content{
@@ -87,6 +96,10 @@ body{
 }
 
 .home-content .btn-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 34.5;
     width: 345px;
     height: 50px;
 }
@@ -112,6 +125,68 @@ body{
     color: #00abf0;
 }
 
+#fondo{
+    background-color: #ededed;
+    color: black;
+    border-radius: 20px;
+}
+
+#fondo2{
+    background-color: black;
+    color: #ededed;
+    border-radius: 20px;
+
+}
+
+#fondo3{
+    background-color: #ededed;
+    color: black;
+    border-radius: 30px;
+}
+
+.home-sci {
+    position:absolute;
+    bottom: 4rem;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: .3rem solid black;
+    border-radius: 60%;
+    font-size: 27px;
+    color: black;
+    overflow: hidden;
+}
+
+.home-sci a::before{
+    content: '';
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--main-color);
+    z-index: -1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover{
+    color: var(--main-color);
+}
+
+.home-sci a:hover::before{
+    width: 100%;
+}
 
 
 
